@@ -14,7 +14,7 @@ public class Classwork {
         }
         System.out.println();
 
-
+        // вызов метода
         System.out.println(minNumber(array));
 
 
@@ -22,11 +22,9 @@ public class Classwork {
     }
     public static int minNumber (int[] arr){
         int result = 0;
-        int index = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] < 0 && i > index){
-                result = arr[i];
-                index = i;
+        for (int i = arr.length - 1; i > 0; i--) {
+            if(arr[i] < 0){
+                return arr[i];
             }
         }
 
